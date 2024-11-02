@@ -45,6 +45,7 @@ const renderNotes = () => {
   notes.forEach((note, index) => {
     const div = document.createElement('div');
     div.innerHTML = `<div class="note-item">
+    <button class="copy" data="${note.note}">📋</button>
       <p class="msgNote">${note.note}</p>
       <button class="delete" data-index="${index}">Delete</button>
     </div>`;
@@ -57,12 +58,28 @@ const renderNotes = () => {
       deleteNote(index);
     });
   });
-};
 
-const loadNote = () => {
-  renderNotes();
+  document.querySelectorAll(".copy").forEach(button2 => {
+    button2.addEventListener("click", () => {
+      const data = button2.getAttribute("data");
+      writeToClipboard(data);
+    });
+  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   loadNote();
 });
+
+const loadNote = () => {
+  renderNotes();
+};
+
+const writeToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    alert("Text copied!");
+  } catch (e) {
+    alert(e);
+  }
+};
