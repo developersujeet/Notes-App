@@ -1,0 +1,87 @@
+html,
+body {
+  margin: 0 auto;
+  padding: 0;
+  user-select: none;
+  transition: all 0.5s;
+}
+
+header,
+main {
+  padding: 1rem;
+}
+
+header {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  background-color: #E2EFDE;
+}
+
+.app-title {
+  font-size: 48px;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #fff;
+}
+
+.input-text,
+.input-add {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.input-text {
+  border: 0;
+  font-size: 18px;
+}
+
+.input-add {
+  font-size: 32px;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.input-add {
+  border: 0;
+  background-color: #6D435A;
+  color: #fff;
+  height: 5rem;
+  width: 4rem;
+}
+
+.input-add:active {
+  background-color: #8D546A;
+}
+.note-item{
+  border: 1px solid #EAEAEA;
+  margin-top:1rem;
+  border-radius: 0.3rem;
+  background-color: #E2EFDE;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.delete{
+  background-color: #FF6978;
+  border: none;
+  border-radius: 0.4rem;
+  border: 1px solid #EAEAEA;
+  font-size: 1.2rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+.delete:active{
+  background-color: #FF7A89;
+}
+.msgNote{
+  font-weight: bolder;
+}
+form,button,.input-text{
+  border-radius: 0.5rem;
+}
